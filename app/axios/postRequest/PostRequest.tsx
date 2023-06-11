@@ -11,7 +11,7 @@ const [name, setName] = useState('');
   const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
-        const resp = await axios.post(url, {name: name, email: email})
+        const resp = await axios.post(url, {name, email})
         console.log(resp);
     } catch (error:any) {
         console.log(error.response);

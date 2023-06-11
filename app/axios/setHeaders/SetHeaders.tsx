@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import axios from 'axios';
 
-const API = 'https://icanhazdadjoke.com/';
+const url = 'https://icanhazdadjoke.com/';
 
 const SetHeaders = () => {
 
@@ -10,7 +10,7 @@ const SetHeaders = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const resp = await axios(API, {
+        const resp = await axios(url, {
           headers: {
             accept: 'application/json'
           }
